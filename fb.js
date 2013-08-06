@@ -284,6 +284,9 @@
             if(options('timeout')) {
                 requestOptions['timeout'] = options('timeout');
             }
+            if(options('followRedirect')) {
+                requestOptions['followRedirect'] = options('followRedirect');
+            }
             request(requestOptions
             , function(error, response, body) {
                 if(error !== null) {
